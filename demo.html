@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+        <title>Autocomplete search plugin for basic JSON v1.0</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="autocomplete-v1.0.css" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="autocomplete-v1.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sample").autocomplete({
+                    dataSource: "https://raw.githubusercontent.com/hishamtj/demo/master/db.json", //default: "sample.json"
+                    dataSourceAllowCache: false, //default: false
+                    dataParameterName: "", //default: "" //should contain the query string parameter name in case of server side JSON response page
+                    minimumCharacters: 3, //default: 3
+                    resultsHolder: ".searchHolder", //default: ".searchHolder" //results can be loaded in any other container
+                    noResultsMessage: "No results",
+                    errorMessage: "An error has occurred",
+                    messageAlert: true, //default: true, show the messages in alert //if set to "false", the "messageHolder" should be set
+                    messageHolder: null, //default: null //should contain the error message container element in case the "messageAlert" is set to "false"
+                    showLoader: true, //default: true
+                    loaderHolder: ".searchHolder", //default: ".searchHolder" //loader can be shown in any other container
+                    resultJsonTextField: "name", //default: "name" //should contain the JSON key title holding the text of the result trigger
+                    resultJsonValueField: "id", //default: "id" //should contain the JSON key title holding the value of the result trigger
+                    resultClickFunctionName: "customClickFunction" //should contain the function name to be triggered on selected result click
+                });
+            });
+            //sample function that is triggered on selected result click, the function name should be set in the "resultClickFunctionName" option
+            function customClickFunction(selectedOption) {
+                alert($(selectedOption).html());
+            }
+        </script>
+	</head>
+	<body>
+        <input type="text" id="sample" />
+	</body>
+</html>

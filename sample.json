@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"name": "banana"
+	},
+	{
+		"id": 2,
+		"name": "apple"
+	},
+	{
+		"id": 3,
+		"name": "pineapple"
+	},
+	{
+		"id": 4,
+		"name": "grape"
+	},
+	{
+		"id": 5,
+		"name": "orange"
+	},
+	{
+		"id": 6,
+		"name": "peach"
+	},
+	{
+		"id": 7,
+		"name": "cherry"
+	},
+	{
+		"id": 8,
+		"name": "grapefruit"
+	},
+	{
+		"id": 9,
+		"name": "blueberry"
+	},
+	{
+		"id": 10,
+		"name": "watermelon"
+	},
+	{
+		"id": 11,
+		"name": "apricot"
+	},
+	{
+		"id": 12,
+		"name": "avocado"
+	},
+	{
+		"id": 13,
+		"name": "mango"
+	},
+	{
+		"id": 14,
+		"name": "clementine"
+	},
+	{
+		"id": 15,
+		"name": "nectarine"
+	},
+	{
+		"id": 16,
+		"name": "strawberry"
+	},
+	{
+		"id": 17,
+		"name": "passionfruit"
+	},
+	{
+		"id": 18,
+		"name": "raspberry"
+	},
+	{
+		"id": 19,
+		"name": "mandarin"
+	},
+	{
+		"id": 20,
+		"name": "kiwi"
+	}
+]
