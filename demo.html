@@ -11,7 +11,7 @@
                 $("#sample").autocomplete({
                     dataSource: "https://raw.githubusercontent.com/hishamtj/demo/master/db.json", //default: "sample.json"
                     dataSourceAllowCache: false, //default: false
-                    dataParameterName: "", //default: "" //should contain the query string parameter name in case of server side JSON response page
+                    dataParameterName: "", //default: "" //should contain the query string parameter name in case "dataSource" is set to a server side JSON response search page
                     minimumCharacters: 3, //default: 3
                     resultsHolder: ".searchHolder", //default: ".searchHolder" //results can be loaded in any other container
                     noResultsMessage: "No results",
