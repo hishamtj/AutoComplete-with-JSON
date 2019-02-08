@@ -31,14 +31,14 @@ Options:
 
 **messageAlert:** boolean - show the error messages in a browser alert popup
 
-**messageHolder - string - the CSS class name or ID of the error messages holder element
+**messageHolder:** string - the CSS class name or ID of the error messages holder element
 
-**showLoader - boolean - show a loader during the ajax request
+**showLoader:** boolean - show a loader during the ajax request
 
-**loaderHolder - string - the CSS class name or ID of the loader holder element
+**loaderHolder:** string - the CSS class name or ID of the loader holder element
 
-**resultLinkTextFields - string - the JSON key title(s) holding the text(s) that will appear on each result
+**resultLinkTextFields:** string - the JSON key title(s) holding the text(s) that will appear on each result
 
-**resultLinkDataAttributes - string - the JSON key title(s) holding the value(s) that will appear as data-attribute on each result
+**resultLinkDataAttributes:** string - the JSON key title(s) holding the value(s) that will appear as data-attribute on each result
 
-**resultClickFunctionName - string - the function name to be triggered on selected result click
+**resultClickFunctionName:** string - the function name to be triggered on selected result click
