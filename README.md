@@ -31,5 +31,5 @@ Options:
   
 Notes:
 -------
-1. JQuery should be included in the page using this plugin as it does not contain it itself to keep it as small as possible
+1. JQuery should be included in the webpage as the plugin does not contain it itself to keep it as small as possible
 2. for any suggestions, updates or bugs, please contact me on my [email](mailto:hisham.tj@gmail.com "Email")
