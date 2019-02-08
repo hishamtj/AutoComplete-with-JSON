@@ -34,5 +34,5 @@ Notes:
 1. JQuery should be included in the webpage as the plugin does not contain it itself to keep it as small as possible
 2. the plugin works only at stage with simple JSON response objects (like the included example) so accessing multi-level objects within the JSON is still not available
 3. the CSS and JS files are included as they are with no minification or obfuscation to facilitate the editing and updates as needed
-4. all options mentioned above have their default values in the settings, so if the parameters were not adjusted to fit the data you have, the plugin will not return any data, and might throw errors
+4. all options mentioned above have their default values in the settings in can any of the required fields was missed, but if the parameters were not adjusted to fit the data you have, the plugin will not return any data, and might throw errors
 5. for any suggestions, updates or bugs, please contact me on my [email](mailto:hisham.tj@gmail.com "Email")
