@@ -27,3 +27,9 @@ Options:
 **resultLinkTextFields:** *string*, the JSON key title(s) holding the text(s) that will appear on each result  
 **resultLinkDataAttributes:** *string*, the JSON key title(s) holding the value(s) that will appear as data-attribute on each result  
 **resultClickFunctionName:** *string*, the function name to be triggered on selected result click
+  
+  
+Notes:
+-------
+1. JQuery should be included in the page using this plugin as it does not contain it itself to keep it as small as possible
+2. for any suggestions, updates or bugs, please contact me on my [email](mailto:hisham.tj@gmail.com "Email")
