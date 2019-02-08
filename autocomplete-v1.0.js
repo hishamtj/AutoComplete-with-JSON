@@ -24,15 +24,15 @@ $.fn.autocomplete = function (options) {
     }, options);
     return this.keyup(function (e) {
         if (excludedKeyCodes.indexOf(e.keyCode) < 0) {
+            if (!$(settings.resultsHolder)) {
+                settings.resultsHolder = $(this).parent();
+            }
+            if (!settings.messageHolder) {
+                settings.messageHolder = settings.resultsHolder;
+            }
             if (settings.dataSource && settings.dataSource.length > 0) {
                 if (settings.resultLinkTextFields && settings.resultLinkTextFields.length > 0 && settings.resultLinkDataAttributes && settings.resultLinkDataAttributes.length > 0) {
-                    var value = $(this).val();
-                    if (!$(settings.resultsHolder)) {
-                        settings.resultsHolder = $(this).parent();
-                    }
-                    if (!settings.messageHolder) {                                            
-                        settings.messageHolder = settings.resultsHolder;
-                    }
+                    var value = $(this).val();                    
                     if (value.length >= settings.minimumCharacters) {
                         if (settings.showLoader) {
                             if (!settings.loaderHolder) {
@@ -72,7 +72,7 @@ $.fn.autocomplete = function (options) {
                                 });
                             }
                             else {
-                                alert("No JSON search field name is defined");
+                                throwError("No JSON search field name is defined", settings, "error");
                             }
                         }
                         else {
@@ -92,7 +92,7 @@ $.fn.autocomplete = function (options) {
                                 });
                             }
                             else {
-                                alert("No search query parameter name is defined");
+                                throwError("No search query parameter name is defined", settings, "error");
                             }
                         }
                     }
@@ -102,11 +102,11 @@ $.fn.autocomplete = function (options) {
                     }
                 }
                 else {
-                    alert("No JSON text &/or value field is defined");
+                    throwError("No JSON text &/or value field is defined", settings, "error");
                 }
             }
             else {
-                alert("No JSON data source is defined");
+                throwError("No JSON data source is defined", settings, "error");
             }
         }
         else {
@@ -197,8 +197,11 @@ function throwError(errorMessage, settings, errorType) {
     }
     else {
         var messageHolder = document.createElement("span");
+        $(messageHolder).html(errorMessage);
+        $(messageHolder).addClass("message " + (errorType == "error" ? "error" : "noResults"));
+        if ($(settings.messageHolder).find("span.message").length > 0) {
+            $(settings.messageHolder).find("span.message").remove();
+        }
         $(settings.messageHolder).append(messageHolder);
-        $(settings.messageHolder).find("span").html(errorMessage);
-        $(settings.messageHolder).find("span").addClass("message " + (errorType == "error" ? "error" : "noResults"));
     }
 }
