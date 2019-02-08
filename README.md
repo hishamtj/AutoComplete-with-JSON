@@ -13,18 +13,18 @@ Each result is displayed in an anchor link (a) with a "data-value" attribute con
 
 Options:
 ---------
-**dataSource:** string - the data source of the plugin  
-**dataSourceAllowCache:** boolean - allow ajax call caching  
-**dataParameterName:** string - the query string parameter name in case "dataSource" is set to a page URL  
-**dataSourceSearchFields:** string - the JSON key title(s) holding the value(s) to be searched when "dataSource" is JSON file/URL  
-**minimumCharacters:** integer - the minimum number of characters to trigger the plugin  
-**resultsHolder:** string - the CSS class name or ID of the results holder element  
-**noResultsMessage:** string - the message that shows when no results are found  
-**errorMessage:** string - the message that shows when an error occurs during the ajax call  
-**messageAlert:** boolean - show the error messages in a browser alert popup  
-**messageHolder:** string - the CSS class name or ID of the error messages holder element  
-**showLoader:** boolean - show a loader during the ajax request  
-**loaderHolder:** string - the CSS class name or ID of the loader holder element  
-**resultLinkTextFields:** string - the JSON key title(s) holding the text(s) that will appear on each result  
-**resultLinkDataAttributes:** string - the JSON key title(s) holding the value(s) that will appear as data-attribute on each result  
-**resultClickFunctionName:** string - the function name to be triggered on selected result click
+**dataSource:** *string*, the data source of the plugin  
+**dataSourceAllowCache:** *boolean*, allow ajax call caching  
+**dataParameterName:** *string*, the query string parameter name in case "dataSource" is set to a page URL  
+**dataSourceSearchFields:** *string*, the JSON key title(s) holding the value(s) to be searched when "dataSource" is JSON file/URL  
+**minimumCharacters:** *integer*, the minimum number of characters to trigger the plugin  
+**resultsHolder:** *string*, the CSS class name or ID of the results holder element  
+**noResultsMessage:** *string*, the message that shows when no results are found  
+**errorMessage:** *string*, the message that shows when an error occurs during the ajax call  
+**messageAlert:** *boolean*, show the error messages in a browser alert popup  
+**messageHolder:** *string*, the CSS class name or ID of the error messages holder element  
+**showLoader:** *boolean*, show a loader during the ajax request  
+**loaderHolder:** *string*, the CSS class name or ID of the loader holder element  
+**resultLinkTextFields:** *string*, the JSON key title(s) holding the text(s) that will appear on each result  
+**resultLinkDataAttributes:** *string*, the JSON key title(s) holding the value(s) that will appear as data-attribute on each result  
+**resultClickFunctionName:** *string*, the function name to be triggered on selected result click
