@@ -7,10 +7,9 @@ While in the case of a page URL, the search should be done on that page level an
 
 The results are displayed in an unordered list `<ul>` with the ability to use the up/down keyboard keys to move between the returned results
 
-Each result is displayed in an anchor link `<a>` with a "data-value" attribute containing the value of the result, the result is clickable and the function name that is called can be defined in the plugin options
-
-
-
+Each result is displayed in an anchor link `<a>` with user defined data-attribute(s) containing the value(s) of the result, the result is clickable and the function name that is called can be defined in the plugin options
+  
+  
 Options:
 ---------
 **dataSource:** *string*, the data source of the plugin  
