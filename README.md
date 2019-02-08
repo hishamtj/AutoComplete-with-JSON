@@ -5,9 +5,9 @@ The datasource of the plugin can be a JSON file (like the included sample.json),
 In both JSON file/URL datasources, the data filtration and search is done in the plugin itself (in the JS code), here the plugin serves both as a search and autosuggest component  
 While in the case of a page URL, the search should be done on that page level and only the filtered JSON result should be returned to the plugin, here the plugin only serves as an autosuggest component
 
-The results are displayed in an unordered list (ul) with the ability to use the up/down keyboard keys to move between the returned results
+The results are displayed in an unordered list `<ul>` with the ability to use the up/down keyboard keys to move between the returned results
 
-Each result is displayed in an anchor link (a) with a "data-value" attribute containing the value of the result, the result is clickable and the function name that is called can be defined in the plugin options
+Each result is displayed in an anchor link `<a>` with a "data-value" attribute containing the value of the result, the result is clickable and the function name that is called can be defined in the plugin options
 
 
 
