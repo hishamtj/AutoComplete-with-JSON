@@ -14,8 +14,9 @@ All parameters are configurable using the plugin options, and any updates to how
   
 Options:
 ---------
-#### **(R)** required
-#### **(O)** optional
+**(R)** required  
+**(O)** optional  
+  
 **(R) dataSource:** *`string`*, the data source of the plugin  
 **(O) dataSourceAllowCache:** *`boolean`*, allow ajax call caching  
 **(R) dataParameterName:** *`string`*, the query string parameter name in case "dataSource" is set to a page URL  
