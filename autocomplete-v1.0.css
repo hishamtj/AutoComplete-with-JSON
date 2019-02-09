@@ -51,9 +51,6 @@ ul.resultsList li a {
 ul.resultsList li.selected a, ul.resultsList li:hover a {
     background-color: #b0dbec;
 }
-div.loaderHolder {
-    position: relative;
-}
 div.loaderHolder div.loader {
     position: absolute;
     width: 12%;

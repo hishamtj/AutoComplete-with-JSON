@@ -17,8 +17,8 @@
                     resultsHolder: ".searchHolder", //default: ".searchHolder" //results can be loaded in any other container
                     noResultsMessage: "No results",
                     errorMessage: "An error has occurred",
-                    messageAlert: false, //default: true, show the messages in alert //if set to "false", the "messageHolder" should be set
-                    messageHolder: null, //default: null //should contain the error message container element in case the "messageAlert" is set to "false"
+                    messageAlert: true, //default: true, show the messages in alert //if set to "false", the "messageHolder" should be set
+                    messageHolder: ".searchHolder", //default: ".searchHolder" //messages can be displayed in any other container in case the "messageAlert" is set to "false"
                     showLoader: true, //default: true
                     loaderHolder: ".searchHolder", //default: ".searchHolder" //loader can be shown in any other container                    
                     resultLinkTextFields: "name", //default: "name" //should contain the JSON key title(s) holding the text(s) that will appear on each result (comma separated in case of multiple keys)
