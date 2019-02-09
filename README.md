@@ -5,13 +5,17 @@ The datasource of the plugin can be a JSON file (like the included sample.json),
 In both JSON file/URL datasources, the data filtration and search is done in the plugin itself (in the JS code), here the plugin serves both as a search and autosuggest component  
 While in the case of a page URL, the search should be done on that page level and only the filtered JSON result should be returned to the plugin, here the plugin only serves as an autosuggest component
 
-The results are displayed in an unordered list `<ul>` with the ability to use the up/down keyboard keys to move between the returned results
+The results are displayed in an unordered list `<ul>` with the ability to use the keyboard up/down keys to move between the returned results, and the enter key to select one
 
-Each result is displayed in an anchor link `<a>` with user defined data-attribute(s) containing the value(s) of the result, the result is clickable and the function name that is called can be defined in the plugin options
+Each result is displayed in an anchor link `<a>` with user defined data-attribute(s) containing the value(s) of the result, the result is clickable and the function name that is called can be defined in the plugin options  
+  
+All parameters are configurable using the plugin options, and any updates to how the plugin works or looks is available and open through the JS or CSS files
   
   
 Options:
 ---------
+#### **(R)** required
+#### **(O)** optional
 **dataSource:** *`string`*, the data source of the plugin  
 **dataSourceAllowCache:** *`boolean`*, allow ajax call caching  
 **dataParameterName:** *`string`*, the query string parameter name in case "dataSource" is set to a page URL  
@@ -31,8 +35,8 @@ Options:
   
 Notes:
 -------
-1. JQuery should be included in the webpage as the plugin does not contain it itself to keep it as small as possible
+1. JQuery should be included in the page using this plugin, as the plugin does not contain it itself to keep it as small as possible
 2. the plugin works only at stage with simple JSON response objects (like the included example) so accessing multi-level objects within the JSON is still not available
 3. the CSS and JS files are included as they are with no minification or obfuscation to facilitate the editing and updates as needed
 4. all options mentioned above have their default values in the settings in can any of the required fields was missed, but if the parameters were not adjusted to fit the data you have, the plugin will not return any data, and might throw errors
-5. for any suggestions, updates or bugs, please contact me on my [email](mailto:hisham.tj@gmail.com "Email")
+5. for any suggestions/improvements, updates or bugs, please contact me on my [email](mailto:hisham.tj@gmail.com "Email")
