@@ -16,21 +16,21 @@ Options:
 ---------
 #### **(R)** required
 #### **(O)** optional
-**dataSource:** *`string`*, the data source of the plugin  
-**dataSourceAllowCache:** *`boolean`*, allow ajax call caching  
-**dataParameterName:** *`string`*, the query string parameter name in case "dataSource" is set to a page URL  
-**dataSourceSearchFields:** *`string`*, the JSON key title(s) holding the value(s) to be searched when "dataSource" is JSON file/URL (comma separated in case of multiple keys)  
-**minimumCharacters:** *`integer`*, the minimum number of characters to trigger the plugin  
-**resultsHolder:** *`string`*, the CSS class name or ID of the results holder element  
-**noResultsMessage:** *`string`*, the message that shows when no results are found  
-**errorMessage:** *`string`*, the message that shows when an error occurs during the ajax call  
-**messageAlert:** *`boolean`*, show the error messages in a browser alert popup  
-**messageHolder:** *`string`*, the CSS class name or ID of the error messages holder element  
-**showLoader:** *`boolean`*, show a loader during the ajax request  
-**loaderHolder:** *`string`*, the CSS class name or ID of the loader holder element  
-**resultLinkTextFields:** *`string`*, the JSON key title(s) holding the text(s) that will appear on each result (comma separated in case of multiple keys)  
-**resultLinkDataAttributes:** *`string`*, the JSON key title(s) holding the value(s) that will appear as data-attribute on each result (comma separated in case of multiple keys)  
-**resultClickFunctionName:** *`string`*, the function name to be triggered on selected result click
+**(R) dataSource:** *`string`*, the data source of the plugin  
+**(O) dataSourceAllowCache:** *`boolean`*, allow ajax call caching  
+**(R) dataParameterName:** *`string`*, the query string parameter name in case "dataSource" is set to a page URL  
+**(R) dataSourceSearchFields:** *`string`*, the JSON key title(s) holding the value(s) to be searched when "dataSource" is JSON file/URL (comma separated in case of multiple keys)  
+**(O) minimumCharacters:** *`integer`*, the minimum number of characters to trigger the plugin  
+**(O) resultsHolder:** *`string`*, the CSS class name or ID of the results holder element  
+**(O) noResultsMessage:** *`string`*, the message that shows when no results are found  
+**(O) errorMessage:** *`string`*, the message that shows when an error occurs during the ajax call  
+**(O) messageAlert:** *`boolean`*, show the error messages in a browser alert popup  
+**(O) messageHolder:** *`string`*, the CSS class name or ID of the error messages holder element  
+**(O) showLoader:** *`boolean`*, show a loader during the ajax request  
+**(O) loaderHolder:** *`string`*, the CSS class name or ID of the loader holder element  
+**(R) resultLinkTextFields:** *`string`*, the JSON key title(s) holding the text(s) that will appear on each result (comma separated in case of multiple keys)  
+**(R) resultLinkDataAttributes:** *`string`*, the JSON key title(s) holding the value(s) that will appear as data-attribute on each result (comma separated in case of multiple keys)  
+**(R) resultClickFunctionName:** *`string`*, the function name to be triggered on selected result click
   
   
 Notes:
