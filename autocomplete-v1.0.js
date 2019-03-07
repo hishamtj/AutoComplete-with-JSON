@@ -1,6 +1,5 @@
 //***********************************************************//
 //Autocomplete search plugin for basic JSON v1.0 - 02/02/2019
-//Hisham Tajeddine - hisham.tj@gmail.com
 //***********************************************************//
 $.fn.autocomplete = function (options) {
 	//wrap the input with a <div>
