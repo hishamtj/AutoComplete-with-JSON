@@ -1,4 +1,4 @@
-# Autocomplete search plugin
+# JS AutoComplete with Json - input plugin
 This is an <input> field plugin that adds the capability to return results from a JSON file/URL or server side search JSON response page
 
 The datasource of the plugin can be a JSON file (like the included sample.json), an online JSON URL (like the applied in the demo.html), or a page URL that returns a JSON response  
