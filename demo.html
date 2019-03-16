@@ -3,16 +3,18 @@
 	<head>
         <title>Autocomplete search plugin for basic JSON v1.0</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="autocomplete-v1.0.css" />
+		<link rel="stylesheet" type="text/css" href="autocomplete.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="autocomplete-v1.0.js"></script>
+        <!-- jquery-ui is needed for the highlight effect and can be removed if not needed -->
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="autocomplete.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#sample").autocomplete({
                     dataSource: "https://raw.githubusercontent.com/hishamtj/demo/master/db.json", //default: "sample.json"
                     dataSourceAllowCache: false, //default: false
                     dataParameterName: "", //default: "" //should contain the query string parameter name in case "dataSource" is set to a server side JSON response search page
-                    dataSourceSearchFields: "name", //default: "name" //should contain the JSON key title(s) holding the value(s) that should be searched in case "dataSource" is set to a JSON file/URL (comma separated in case of multiple keys)
+                    dataSourceSearchFields: "name,address", //default: "name" //should contain the JSON key title(s) holding the value(s) that should be searched in case "dataSource" is set to a JSON file/URL (comma separated in case of multiple keys)
                     minimumCharacters: 3, //default: 3
                     resultsHolder: ".searchHolder", //default: ".searchHolder" //results can be loaded in any other container
                     noResultsMessage: "No results",
@@ -28,11 +30,60 @@
             });
             //sample function that is triggered on selected result click, the function name should be set in the "resultClickFunctionName" option
             function customClickFunction(selectedOption) {
-                alert($(selectedOption).data("id") + " - " + $(selectedOption).html());
+                if ($(".logWindow").is(":visible") == false) {
+                    $(".logWindow div").append("<ul></ul>");
+                    $(".logWindow").show();
+                }
+                var selectedText = "<b>Option:</b> " + $(selectedOption).html();
+                var data = $(selectedOption).data();
+                for (var d in data) {
+                    selectedText += "<br><b>" + d + ":</b> " + data[d];
+                }            
+                $(".logWindow ul").prepend("<li>" + selectedText + "</li>");
+                $(".logWindow ul li:first-child").effect("highlight", { color: '#b0dbec' }, 1000);
             }
         </script>
+        <style type="text/css">
+            .logWindow {
+                position: absolute;
+                border: 1px solid #d5d5d5;
+                padding: 15px 30px 30px 30px;
+                width: 400px;
+                top: 8px;
+                left: 450px;
+                display: none;
+            }
+            .logWindow h3 {
+                margin: 0 0 15px 0;
+                padding: 0 0 15px 0;
+                border-bottom: 2px double #d5d5d5;
+            }
+            .logWindow div {
+                max-height: 200px;
+                overflow-y: auto;
+            }
+            .logWindow ul {
+                padding: 0;
+                margin: 0;
+            }
+            .logWindow ul li {
+                list-style-type: none;
+                margin: 0 0 15px 0;
+                padding: 0 0 15px 0;
+                border-bottom: 1px dashed #c5c5c5;
+            }
+            .logWindow ul li:last-child {
+                margin: 0;
+                padding: 0;
+                border-bottom: none;
+            }
+        </style>
 	</head>
 	<body>
         <input type="text" id="sample" />
+        <div class="logWindow">
+            <h3>Log Window</h3>
+            <div></div>
+        </div>
 	</body>
 </html>
